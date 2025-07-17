@@ -1,0 +1,265 @@
+/* Home.css */
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 60px 40px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  .hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+  }
+  
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+  }
+  
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+  
+  .stat-label {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-top: 8px;
+  }
+  
+  /* Search Section */
+  .search-section {
+    margin-bottom: 40px;
+  }
+  
+  /* Items Section */
+  .items-section {
+    margin-bottom: 40px;
+  }
+  
+  .items-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e1e8ed;
+  }
+  
+  .items-header h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin: 0;
+  }
+  
+  .items-count {
+    color: #666;
+    font-size: 1rem;
+    background: #f8f9fa;
+    padding: 8px 16px;
+    border-radius: 20px;
+  }
+  
+  .items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  
+  /* Loading State */
+  .loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    gap: 20px;
+  }
+  
+  .loading-container p {
+    font-size: 1.1rem;
+    color: #666;
+  }
+  
+  /* Error State */
+  .error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    gap: 20px;
+  }
+  
+  .error-container .error-message {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  .error-container .error-message span {
+    font-size: 1.5rem;
+  }
+  
+  /* Empty State */
+  .empty-state {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .empty-icon {
+    font-size: 4rem;
+    opacity: 0.3;
+  }
+  
+  .empty-state h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin: 0;
+  }
+  
+  .empty-state p {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 0;
+  }
+  
+  /* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 0;
+  }
+  
+  .pagination-info {
+    font-size: 1rem;
+    color: #666;
+    padding: 0 20px;
+  }
+  
+  .pagination .btn {
+    min-width: 100px;
+  }
+  
+  .pagination .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .home-container {
+      padding: 0 15px;
+    }
+    
+    .hero-section {
+      padding: 40px 20px;
+      margin-bottom: 30px;
+    }
+    
+    .hero-content h1 {
+      font-size: 2.2rem;
+    }
+    
+    .hero-content p {
+      font-size: 1.1rem;
+    }
+    
+    .hero-stats {
+      gap: 40px;
+    }
+    
+    .stat-number {
+      font-size: 2rem;
+    }
+    
+    .items-header {
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+    }
+    
+    .items-header h2 {
+      font-size: 1.8rem;
+    }
+    
+    .items-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    
+    .pagination {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .pagination .btn {
+      width: 100%;
+      max-width: 200px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-content h1 {
+      font-size: 1.8rem;
+    }
+    
+    .hero-content p {
+      font-size: 1rem;
+    }
+    
+    .hero-stats {
+      gap: 30px;
+    }
+    
+    .stat-number {
+      font-size: 1.8rem;
+    }
+    
+    .items-header h2 {
+      font-size: 1.5rem;
+    }
+    
+    .empty-state h3 {
+      font-size: 1.5rem;
+    }
+    
+    .empty-state p {
+      font-size: 1rem;
+    }
+  }

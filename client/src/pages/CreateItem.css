@@ -1,0 +1,266 @@
+/* CreateItem.css */
+.create-item-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .create-item-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .create-item-header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .create-item-header p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .create-item-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    padding: 40px;
+    border: 1px solid #e1e8ed;
+  }
+  
+  .create-item-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  /* Form Groups */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form-group label {
+    font-weight: 600;
+    color: #555;
+    font-size: 1rem;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 15px;
+    border: 2px solid #e1e8ed;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  }
+  
+  .form-group small {
+    color: #666;
+    font-size: 0.85rem;
+  }
+  
+  /* Form Row */
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  /* Price Input */
+  .price-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .currency-symbol {
+    position: absolute;
+    left: 15px;
+    font-weight: 600;
+    color: #27ae60;
+    font-size: 1.2rem;
+    z-index: 1;
+  }
+  
+  .price-input-container input {
+    padding-left: 40px;
+  }
+  
+  /* Textarea */
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+  }
+  
+  /* Image Preview */
+  .image-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .image-preview img {
+    max-width: 300px;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #e1e8ed;
+  }
+  
+  .image-error {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    padding: 10px;
+    background: #ffeaea;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  /* Form Actions */
+  .form-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e1e8ed;
+  }
+  
+  .form-actions .btn {
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 140px;
+  }
+  
+  .btn-primary {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+  }
+  
+  .btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+  }
+  
+  .btn-secondary {
+    background: #95a5a6;
+    color: white;
+  }
+  
+  .btn-secondary:hover:not(:disabled) {
+    background: #7f8c8d;
+  }
+  
+  .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Messages */
+  .error-message {
+    background-color: #fff5f5;
+    color: #e53e3e;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #feb2b2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+  }
+  
+  .success-message {
+    background-color: #f0fff4;
+    color: #38a169;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #9ae6b4;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+  }
+  
+  /* Loading State */
+  .btn:disabled.btn-primary {
+    background: #95a5a6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .create-item-container {
+      padding: 15px;
+    }
+    
+    .create-item-card {
+      padding: 25px 20px;
+    }
+    
+    .create-item-header h1 {
+      font-size: 2rem;
+    }
+    
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+    
+    .form-actions {
+      flex-direction: column;
+    }
+    
+    .form-actions .btn {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .create-item-header h1 {
+      font-size: 1.8rem;
+    }
+    
+    .create-item-header p {
+      font-size: 1rem;
+    }
+    
+    .create-item-card {
+      padding: 20px 15px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 12px;
+    }
+    
+    .price-input-container input {
+      padding-left: 35px;
+    }
+    
+    .currency-symbol {
+      left: 12px;
+      font-size: 1rem;
+    }
+  }
